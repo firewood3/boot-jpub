@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div th:object="${person}">
+        <p>name: <span th:text="*{name}"></span></p>
+        <p>age: <span th:text="*{age}"></span></p>
+        <p>birth: <span th:text="*{birth}"></span></p>
+    </div>
+
+    <p th:if="${person.age} >= 20 and ${person.age} < 30">20대 입니다.</p>
+    <p th:if="${person.age} >= 30 and ${person.age} < 40">30대 입니다.</p>
+</body>
+</html>

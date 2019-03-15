@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <tr>
+        <th>name</th>
+        <th>age</th>
+        <th>birth</th>
+    </tr>
+    <tr th:each="person : ${people}">
+        <td th:text="${person.name}"></td>
+        <td th:text="${person.age}"></td>
+        <td th:text="${person.birth}"></td>
+    </tr>
+</table>
+</body>
+</html>
